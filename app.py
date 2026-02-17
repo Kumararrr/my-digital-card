@@ -1,44 +1,50 @@
 import streamlit as st
 
-# Page Configuration
+# 1. Page Configuration
 st.set_page_config(page_title="Kumar | Digital Business Card", page_icon="📇", layout="centered")
 
-# Profile Picture (Using GitHub Profile Image)
+# 2. Profile Picture Section
 col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
-    st.image("https://github.com/Kumararrr.png", width=150)
+    # Using your new professional Fiverr profile photo
+    profile_url = "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_original/v1/attachments/profile/photo/832f05928f61405e3230674092928574-1739793134375/36b9e4a8-9d41-477c-9b16-5623490fd38e.jpg"
+    st.image(profile_url, width=180)
 
-# Header Section
-st.markdown("<h1 style='text-align: center;'>Kumar! 👋</h1>", unsafe_allow_html=True)
+# 3. Header Section
+st.markdown("<h1 style='text-align: center;'>Kumar</h1>", unsafe_allow_html=True)
 st.markdown("<h3 style='text-align: center;'>Python Developer & Freelancer</h3>", unsafe_allow_html=True)
-st.write("I specialize in building interactive web applications and automating tasks using Python.")
+st.markdown("<p style='text-align: center;'>Specializing in Web Apps, Automation, and Digital Solutions.</p>", unsafe_allow_html=True)
 
 st.divider()
 
-# About Me Section
-st.write("### 🚀 What I Do")
-st.write("- **Web Development:** Creating functional web apps with Streamlit.")
-st.write("- **Automation:** Writing Python scripts to simplify repetitive tasks.")
-st.write("- **Data Entry:** Providing accurate and efficient data management services.")
+# 4. About Me Section
+st.write("### 🚀 Services I Offer")
+st.write("- **Python Development:** Building custom tools and interactive web apps.")
+st.write("- **Web Apps with Streamlit:** Creating fast and efficient dashboard solutions.")
+st.write("- **Process Automation:** Automating repetitive tasks to save your time.")
+st.write("- **Data Management:** High-quality data entry and organization services.")
 
 st.divider()
 
-# Contact Section
-st.write("### 📩 Let's Connect")
-st.write("If you have a project or just want to say hi, feel free to reach out!")
+# 5. Contact & Social Section
+st.write("### 📩 Get In Touch")
+st.write("Have a project in mind or want to collaborate? Feel free to reach out!")
 
 # Contact Buttons
 col_a, col_b = st.columns(2)
 with col_a:
-    st.link_button("📧 Email Me", "mailto:your-email@example.com")
+    # Professional link to your Fiverr profile
+    st.link_button("🌐 View Fiverr Profile", "https://www.fiverr.com/kumararrr") # Update with your exact Fiverr URL
 
 with col_b:
+    # Direct WhatsApp Contact
     whatsapp_no = "94743484903" 
-    whatsapp_url = f"https://wa.me/{whatsapp_no}?text=Hi%20Kumar,%20I%20saw%20your%20digital%20card!"
-    st.link_button("💬 WhatsApp Me", whatsapp_url)
+    whatsapp_url = f"https://wa.me/{whatsapp_no}?text=Hi%20Kumar,%20I'm%20interested%20in%20your%20services!"
+    st.link_button("💬 Message on WhatsApp", whatsapp_url)
 
-# Footer
+# 6. Footer
 st.sidebar.markdown("---")
-st.sidebar.write("Developed by Kumar")
+st.sidebar.write("© 2026 | Developed by Kumar")
+st.sidebar.caption("Powered by Python & Streamlit")
 
 
